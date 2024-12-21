@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linha do Tempo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffc1e3, #ffdee9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .timeline {
+      width: 80%;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .event {
+      margin: 20px 0;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .event img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .event .details {
+      flex: 1;
+    }
+
+    .event .date {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .timer-container {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .timer {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .action-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      background: #ff69b4;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 0.5;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .action-button.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+</style>
+</head>
+<body>
+  <div class="timeline" id="timeline">
+    <div class="event">
+      <img src="Date1.jpg" alt="Foto">
+      <div class="details">
+        <div class="date">18/02 - Primeiro Date</div>
+        <div class="description">Esse foi o dia mais importante do nosso relacionamento na minha opinião, o dia onde tudo iniciou
+            o dia em que só não era para voltar namorando, mas nós estavamos namorando antes mesmo de sair pela primeira vez, esse foi um
+            dia especial e lindo, eu me lembro com muito carinho e amor desse dia, o inicio de tudo, você conhecendo minha mãe, minha avó, 
+            a equipe de trabalho.
+            Do nada você aqui no portão de casa ajudando a descarregar o carro enquanto eu trocava de roupa antes de sairmos, chegando lá pedi um
+            lanche com picles, ECA e na mais pura naturalidade "Ce quer meu picles?" e você sorrindo aceitou, foi a primeira vez que vi seu sorriso
+            no carro você estava tensa, naquele momento eu tive a certeza que era com você que eu iria passar a vida, aquele dia eu disse meu primeiro
+            SIM!
+        </div>
+      </div>
+    </div>
+    <div class="event">
+      <img src="date2.jpeg" alt="Foto">
+      <div class="details">
+        <div class="date">27/02 - Rei Leão</div>
+            <div class="description">Esse dia foi bem importante para nós, foi o dia que seu pai quis me conhecer e eu sai completamente
+            nervoso de casa, pensando nesse encontro com ele, foi talvez o caminho mais longo da minha casa até a sua, depois disso
+            fomos ao rei leão, e foi um evento MUITO, MUITO legal, foi algo que me marcou e eu senti ainda mais que era para ser.
+        </div>
+      </div>
+    </div>
+    <div class="event">
+      <img src="namoro.jpg" alt="Foto">
+      <div class="details">
+        <div class="date">20/04 - O pedido de namoro</div>
+        <div class="description">Esse dia aqui foi completamente cinema, que dia incrivel, eu passei a semana toda te ignorando pois sabia que muito contato,
+                                 me faria contar oque eu estava escondendo, sua mãe sabia, seu pai, meus pais e somente você não fazia ideia.
+                                 Fomos então para o parque e eu estava com muita vergonha nesse dia, eu estava com medo de você não aceitar meu pedido, lembra que eu 
+                                 estava procurando um lugar escondido, justamente por medo de você não aceitar e um tanto de gente não ver, até que chegou o momento e 
+                                 eu fiquei muito nervoso, por sorte, você ficou completamente bugada no pão de queijo, pois nesse momento, estava eu quase deitado na grama
+                                 depois de tombar tentando tirar a aliança do bolso kkkkk.
+                                 Foi incrivel, do nosso jeito doido de ser e atrapalhado, você disse sim com o olho cheio de lágrima.
+                                 Ali eu tive a certeza do quanto eu te amava.
+        </div>
+      </div>
+    </div>
+    <div class="event">
+      <img src="PrimeiroEjc.jpg" alt="Foto">
+      <div class="details">
+        <div class="date">04/05 - O Primeiro EJC</div>
+        <div class="description">Nosso primeiro EJC juntos, foi lindo no sábado e tenso no domingo, fiquei com tanto medo e tensão e nesse momento você estava lá,
+            segurando minha mão.
+        </div>
+      </div>
+    </div>
+    <div class="event">
+      <img src="Casamento.jpeg" alt="Foto">
+      <div class="details">
+        <div class="date">31/05 - Casamento Fabricio e Carol</div>
+        <div class="description">O dia do nosso primeiro casamento, você estava absurdamente linda, uma princesa maravilhosa, eu te amo muito.</div>
+      </div>
+    </div>
+    <div class="event">
+      <img src="aparecida.jpeg" alt="Foto">
+      <div class="details">
+        <div class="date">07/12 - Aparecida do Norte </div>
+        <div class="description">Esse foi um dos dias mais especiais do nosso relacionamento, nossa primeira viagema casa da mãe juntos, eu como sempre mantive
+            a postura de malandro, enquanto você se derretia chorando, nesse dia pela primeira vez eu não pedi nada em oração, eu somente agradeci por nós, por você,
+            pelo nosso relacionamento, sinto que ali foi um grande passo e uma virada de chave, naquele momento deixamos de ser apenas um casal e nos tormanos UM CASAL, 
+            blindamos e abençoamos nosso namoro, nossas vidas e nossa futura familia. 
+            Eu tive a certeza que eu tenho do meu lado a melhor esposa e a melhor mãe para meus filhos, eu tenho a plena certeza que eu escolhi a pessoa certa para envelhecer.
+            Amor, eu entreguei você a nossa senhora e ao filho dela com a certeza que vamos viver tudo de mais lindo que existe nesse mundo, te amar é muito alem do que possa descrever
+            em palavras, te amar é um sentimento sem igual, uma leveza e paz sem medidas.
+            Você é a luz na minha escuridão, você é a certeza de dias lindos.
+            Eu te amo muito minha pequena.
+      </div>
+    </div>
+  </div>
+ 
+  <div class="timer-container">
+    <div class="timer" id="timer">Carregando...</div>
+    <button class="action-button" id="action-button" onclick="openLink()">Liberado!</button>
+  </div>
+  <script>
+    function updateTimer() {
+      const christmas = new Date('December 25, 2024 00:00:00');
+      const now = new Date();
+      const diff = christmas - now;
+
+      if (diff <= 0) {
+        document.getElementById('timer').textContent = 'Feliz Natal!';
+        const button = document.getElementById('action-button');
+        button.classList.add('active');
+        button.textContent = 'Clique aqui!';
+      } else {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        document.getElementById('timer').textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+    }
+
+    function openLink() {
+      window.open("https://drive.google.com/file/d/1HidAO2gksq53bqfoE7t3Ej6_O9tyuPnL/view?usp=drive_link", "_blank");
+    }
+
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>
